@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:syed_s_application4/core/app_export.dart';
 import 'package:syed_s_application4/presentation/home_page/home_page.dart';
 import 'package:syed_s_application4/presentation/message_page/message_page.dart';
-import 'package:syed_s_application4/presentation/profile_page/profile_page.dart';
+import 'package:syed_s_application4/presentation/settings_screen/settings_screen.dart';
 import 'package:syed_s_application4/presentation/saved_page/saved_page.dart';
 import 'package:syed_s_application4/widgets/custom_bottom_bar.dart';
 
@@ -42,7 +42,7 @@ class HomeContainerScreen extends StatelessWidget {
       case BottomBarEnum.Saved:
         return AppRoutes.savedPage;
       case BottomBarEnum.Profile:
-        return AppRoutes.profilePage;
+        return AppRoutes.settingsScreen;
       default:
         return "/";
     }
@@ -57,8 +57,8 @@ class HomeContainerScreen extends StatelessWidget {
         return MessagePage();
       case AppRoutes.savedPage:
         return SavedPage();
-      case AppRoutes.profilePage:
-        return ProfilePage();
+      case AppRoutes.settingsScreen:
+        return SettingsScreen();
       default:
         return DefaultWidget();
     }

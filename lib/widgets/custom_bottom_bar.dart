@@ -35,7 +35,7 @@ class CustomBottomBarState extends State<CustomBottomBar> {
     BottomMenuModel(
       icon: ImageConstant.imgNavprofile,
       activeIcon: ImageConstant.imgNavprofile,
-      title: "Profile",
+      title: "Account",
       type: BottomBarEnum.Profile,
     )
   ];
