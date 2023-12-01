@@ -4,15 +4,15 @@ import 'package:syed_s_application4/widgets/custom_elevated_button.dart';
 import 'package:syed_s_application4/presentation/confirmation_dialog/confirmation_dialog.dart';
 
 // ignore_for_file: must_be_immutable
-class SpeciallizationScreen extends StatefulWidget {
-  const SpeciallizationScreen({Key? key}) : super(key: key);
+class SelectcourtScreen extends StatefulWidget {
+  const SelectcourtScreen({Key? key}) : super(key: key);
 
   @override
-  _SpeciallizationScreenState createState() => _SpeciallizationScreenState();
+  _SelectCourtScreenState createState() => _SelectCourtScreenState();
 }
 
-class _SpeciallizationScreenState extends State<SpeciallizationScreen> {
-  List<String> selectedSpecializations = [];
+class _SelectCourtScreenState extends State<SelectcourtScreen> {
+  String? selectedCourt;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class _SpeciallizationScreenState extends State<SpeciallizationScreen> {
                   width: getHorizontalSize(177),
                   margin: getMargin(top: 44),
                   child: Text(
-                    "What is your specialization?",
+                    "What is your court?",
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
@@ -52,7 +52,7 @@ class _SpeciallizationScreenState extends State<SpeciallizationScreen> {
                 Padding(
                   padding: getPadding(top: 7),
                   child: Text(
-                    "Select your specializations as a lawyer",
+                    "Select your practicing court as a lawyer",
                     style: CustomTextStyles.titleSmallBluegray400_1,
                   ),
                 ),
@@ -61,30 +61,15 @@ class _SpeciallizationScreenState extends State<SpeciallizationScreen> {
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        buildCheckbox("Admiralty Lawyer"),
-                        buildCheckbox("Business Lawyer"),
-                        buildCheckbox("Constitutional Lawyer"),
-                        buildCheckbox("Environmental Lawyer"),
-                        buildCheckbox("Property Lawyer"),
-                        buildCheckbox("Patent Lawyer"),
-                        buildCheckbox("Healthcare Lawyer"),
-                        buildCheckbox("Criminal Defense Lawyer"),
-                        buildCheckbox("Family Lawyer"),
-                        buildCheckbox("Personal Injury Lawyer"),
-                        buildCheckbox("Immigration Lawyer"),
-                        buildCheckbox("Labor and Employment Lawyer"),
-                        buildCheckbox("Intellectual Property Lawyer"),
-                        buildCheckbox("Estate Planning Lawyer"),
-                        buildCheckbox("Real Estate Lawyer"),
-                        buildCheckbox("Bankruptcy Lawyer"),
-                        buildCheckbox("Tax Lawyer"),
-                        buildCheckbox("Divorce Lawyer"),
-                        buildCheckbox("Civil Rights Lawyer"),
-                        buildCheckbox("Corporate Lawyer"),
-                        buildCheckbox("Entertainment Lawyer"),
-                        buildCheckbox("Social Security Disability Lawyer"),
-
-                        // Add more checkboxes for other categories here...
+                        buildRadio("Local/Municipal Courts"),
+                        buildRadio("District Courts"),
+                        buildRadio("Superior Courts"),
+                        buildRadio("High Courts"),
+                        buildRadio("Supreme Courts"),
+                        buildRadio("Constitutional Courts"),
+                        buildRadio("Federal Courts"),
+                        buildRadio("International Courts"),
+                        // Add more radio buttons for other categories here...
                       ],
                     ),
                   ),
@@ -111,35 +96,29 @@ class _SpeciallizationScreenState extends State<SpeciallizationScreen> {
   /// The custom content is created using the [ConfirmationDialog]
   /// method and is displayed in an [AlertDialog] that fills the entire screen
   /// with no padding.
-  // onTapContinue(BuildContext context) {
-  //   showDialog(
-  //       context: context,
-  //       builder: (_) => AlertDialog(
-  //             content: ConfirmationDialog(),
-  //             backgroundColor: Colors.transparent,
-  //             contentPadding: EdgeInsets.zero,
-  //             insetPadding: const EdgeInsets.only(left: 0),
-  //           ));
-  // }
-
   onTapContinue(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.selectCourt);
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        content: ConfirmationDialog(),
+        backgroundColor: Colors.transparent,
+        contentPadding: EdgeInsets.zero,
+        insetPadding: const EdgeInsets.only(left: 0),
+      ),
+    );
   }
 
-  Widget buildCheckbox(String title) {
-    return CheckboxListTile(
+  Widget buildRadio(String title) {
+    return RadioListTile(
       title: Text(
         title,
         style: theme.textTheme.bodyText1,
       ),
-      value: selectedSpecializations.contains(title),
+      value: title,
+      groupValue: selectedCourt,
       onChanged: (value) {
         setState(() {
-          if (value!) {
-            selectedSpecializations.add(title);
-          } else {
-            selectedSpecializations.remove(title);
-          }
+          selectedCourt = value as String?;
         });
       },
       controlAffinity: ListTileControlAffinity.leading,

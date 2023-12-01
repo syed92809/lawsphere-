@@ -18,6 +18,7 @@ import 'package:syed_s_application4/presentation/chat_screen/chat_screen.dart';
 import 'package:syed_s_application4/presentation/apply_job_screen/apply_job_screen.dart';
 import 'package:syed_s_application4/presentation/notifications_my_proposals_tab_container_screen/notifications_my_proposals_tab_container_screen.dart';
 import 'package:syed_s_application4/presentation/settings_screen/settings_screen.dart';
+import 'package:syed_s_application4/presentation/select_court/select_court.dart';
 import 'package:syed_s_application4/presentation/personal_info_screen/personal_info_screen.dart';
 import 'package:syed_s_application4/presentation/experience_setting_screen/experience_setting_screen.dart';
 import 'package:syed_s_application4/presentation/new_position_screen/new_position_screen.dart';
@@ -26,6 +27,7 @@ import 'package:syed_s_application4/presentation/privacy_screen/privacy_screen.d
 import 'package:syed_s_application4/presentation/language_screen/language_screen.dart';
 import 'package:syed_s_application4/presentation/notifications_screen/notifications_screen.dart';
 import 'package:syed_s_application4/presentation/app_navigation_screen/app_navigation_screen.dart';
+import 'package:syed_s_application4/presentation/lawyer_registration_screen/lawyer_registration_screen.dart';
 
 class AppRoutes {
   static const String splashScreen = '/splash_screen';
@@ -47,6 +49,8 @@ class AppRoutes {
   static const String speciallizationScreen = '/speciallization_screen';
 
   static const String selectACountryScreen = '/select_a_country_screen';
+
+  static const String selectCourt = '/select_court';
 
   static const String loginScreen = '/login_screen';
 
@@ -101,6 +105,8 @@ class AppRoutes {
 
   static const String languageScreen = '/language_screen';
 
+  static const String lawyerRegScreen = '/lawyer_registration_screen';
+
   static const String notificationsScreen = '/notifications_screen';
 
   static const String appNavigationScreen = '/app_navigation_screen';
@@ -115,6 +121,7 @@ class AppRoutes {
     jobTypeScreen: (context) => JobTypeScreen(),
     speciallizationScreen: (context) => SpeciallizationScreen(),
     selectACountryScreen: (context) => SelectACountryScreen(),
+    selectCourt: (context) => SelectcourtScreen(),
     loginScreen: (context) => LoginScreen(),
     enterOtpScreen: (context) => EnterOtpScreen(),
     homeContainerScreen: (context) => HomeContainerScreen(),
@@ -132,6 +139,7 @@ class AppRoutes {
     addNewEducationScreen: (context) => AddNewEducationScreen(),
     privacyScreen: (context) => PrivacyScreen(),
     languageScreen: (context) => LanguageScreen(),
+    lawyerRegScreen: (context) => LawyerRegScreen(),
     notificationsScreen: (context) => NotificationsScreen(),
     appNavigationScreen: (context) => AppNavigationScreen()
   };

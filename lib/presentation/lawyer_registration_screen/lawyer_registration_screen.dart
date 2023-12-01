@@ -4,8 +4,8 @@ import 'package:syed_s_application4/widgets/custom_elevated_button.dart';
 import 'package:syed_s_application4/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
-class SignUpCompleteAccountScreen extends StatelessWidget {
-  SignUpCompleteAccountScreen({Key? key}) : super(key: key);
+class LawyerRegScreen extends StatelessWidget {
+  LawyerRegScreen({Key? key}) : super(key: key);
 
   TextEditingController firstNameController = TextEditingController();
 
@@ -53,7 +53,7 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                               alignment: Alignment.center,
                               child: Padding(
                                   padding: getPadding(top: 9),
-                                  child: Text("Create Account as Client",
+                                  child: Text("Create Account as Lawyer",
                                       style: CustomTextStyles
                                           .titleSmallBluegray400_1))),
                           Padding(
@@ -127,7 +127,10 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
                               contentPadding: getPadding(
                                   left: 12, top: 15, right: 12, bottom: 15)),
                           CustomElevatedButton(
-                              text: "Create Account",
+                              onTap: () {
+                                onTapContinueLawyer(context);
+                              },
+                              text: "Continue",
                               margin: getMargin(top: 40),
                               buttonStyle: CustomButtonStyles.fillPrimary),
                           Align(
@@ -197,5 +200,9 @@ class SignUpCompleteAccountScreen extends StatelessWidget {
   /// to push the named route for the loginScreen.
   onTapTxtLargelabelmediu(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.loginScreen);
+  }
+
+  onTapContinueLawyer(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.speciallizationScreen);
   }
 }

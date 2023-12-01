@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: theme,
       title: 'syed_s_application4',
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.jobTypeScreen,
+      initialRoute: AppRoutes.speciallizationScreen,
       routes: AppRoutes.routes,
     );
   }
