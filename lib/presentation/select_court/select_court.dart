@@ -41,7 +41,7 @@ class _SelectCourtScreenState extends State<SelectcourtScreen> {
                   width: getHorizontalSize(177),
                   margin: getMargin(top: 44),
                   child: Text(
-                    "What is your court?",
+                    "Court",
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
@@ -96,17 +96,22 @@ class _SelectCourtScreenState extends State<SelectcourtScreen> {
   /// The custom content is created using the [ConfirmationDialog]
   /// method and is displayed in an [AlertDialog] that fills the entire screen
   /// with no padding.
+
   onTapContinue(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        content: ConfirmationDialog(),
-        backgroundColor: Colors.transparent,
-        contentPadding: EdgeInsets.zero,
-        insetPadding: const EdgeInsets.only(left: 0),
-      ),
-    );
+    Navigator.pushNamed(context, AppRoutes.applyJobScreen);
   }
+
+  // onTapContinue(BuildContext context) {
+  //   showDialog(
+  //     context: context,
+  //     builder: (_) => AlertDialog(
+  //       content: ConfirmationDialog(),
+  //       backgroundColor: Colors.transparent,
+  //       contentPadding: EdgeInsets.zero,
+  //       insetPadding: const EdgeInsets.only(left: 0),
+  //     ),
+  //   );
+  // }
 
   Widget buildRadio(String title) {
     return RadioListTile(

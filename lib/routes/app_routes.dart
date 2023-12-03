@@ -24,6 +24,7 @@ import 'package:syed_s_application4/presentation/experience_setting_screen/exper
 import 'package:syed_s_application4/presentation/new_position_screen/new_position_screen.dart';
 import 'package:syed_s_application4/presentation/add_new_education_screen/add_new_education_screen.dart';
 import 'package:syed_s_application4/presentation/privacy_screen/privacy_screen.dart';
+import 'package:syed_s_application4/presentation/profile_page/profile_page.dart';
 import 'package:syed_s_application4/presentation/language_screen/language_screen.dart';
 import 'package:syed_s_application4/presentation/notifications_screen/notifications_screen.dart';
 import 'package:syed_s_application4/presentation/app_navigation_screen/app_navigation_screen.dart';
@@ -138,6 +139,7 @@ class AppRoutes {
     newPositionScreen: (context) => NewPositionScreen(),
     addNewEducationScreen: (context) => AddNewEducationScreen(),
     privacyScreen: (context) => PrivacyScreen(),
+    profilePage: (context) => ProfilePage(),
     languageScreen: (context) => LanguageScreen(),
     lawyerRegScreen: (context) => LawyerRegScreen(),
     notificationsScreen: (context) => NotificationsScreen(),

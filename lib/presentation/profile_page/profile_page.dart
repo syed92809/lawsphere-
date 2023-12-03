@@ -259,7 +259,8 @@ class ProfilePage extends StatelessWidget {
                                                   Padding(
                                                       padding: getPadding(
                                                           top: 1, bottom: 2),
-                                                      child: Text("Skills",
+                                                      child: Text(
+                                                          "Specialization",
                                                           style: CustomTextStyles
                                                               .titleMediumInter)),
                                                   CustomImageView(

@@ -44,7 +44,7 @@ class ApplyJobPopupDialog extends StatelessWidget {
               top: 9,
             ),
             child: Text(
-              "Your Application is succesfully sent",
+              "Your profile is completely setup and ready to go.",
               style: CustomTextStyles.titleSmallBluegray400,
             ),
           ),
@@ -52,6 +52,9 @@ class ApplyJobPopupDialog extends StatelessWidget {
             height: getVerticalSize(46),
             width: getHorizontalSize(127),
             text: "Continue",
+            onTap: () {
+              onTapContinue(context);
+            },
             margin: getMargin(
               top: 23,
             ),
@@ -62,4 +65,8 @@ class ApplyJobPopupDialog extends StatelessWidget {
       ),
     );
   }
+}
+
+onTapContinue(BuildContext context) {
+  Navigator.pushNamed(context, AppRoutes.homeContainerScreen);
 }
