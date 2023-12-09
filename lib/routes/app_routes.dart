@@ -29,6 +29,7 @@ import 'package:syed_s_application4/presentation/language_screen/language_screen
 import 'package:syed_s_application4/presentation/notifications_screen/notifications_screen.dart';
 import 'package:syed_s_application4/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:syed_s_application4/presentation/lawyer_registration_screen/lawyer_registration_screen.dart';
+import 'package:syed_s_application4/presentation/lawyer_container_screen/lawyer_container_screen.dart';
 
 class AppRoutes {
   static const String splashScreen = '/splash_screen';
@@ -59,7 +60,11 @@ class AppRoutes {
 
   static const String homePage = '/home_page';
 
+  static const String lawyerHomePage = '/lawyer_home_page';
+
   static const String homeContainerScreen = '/home_container_screen';
+
+  static const String lawyerContainerScreen = '/lawyer_container_screen';
 
   static const String searchScreen = '/search_screen';
 
@@ -126,6 +131,7 @@ class AppRoutes {
     loginScreen: (context) => LoginScreen(),
     enterOtpScreen: (context) => EnterOtpScreen(),
     homeContainerScreen: (context) => HomeContainerScreen(),
+    lawyerContainerScreen: (context) => LawyerContainerScreen(),
     searchScreen: (context) => SearchScreen(),
     jobDetailsTabContainerScreen: (context) => JobDetailsTabContainerScreen(),
     messageActionScreen: (context) => MessageActionScreen(),
