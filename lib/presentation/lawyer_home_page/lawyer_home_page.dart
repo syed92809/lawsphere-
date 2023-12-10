@@ -17,7 +17,8 @@ class LawyerHomePage extends StatelessWidget {
           children: [
             // Profile header,
             Container(
-                height: 140,
+                height: MediaQuery.of(context).size.height * 0.20,
+                width: MediaQuery.of(context).size.width * 0.99,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(
                       255, 20, 7, 44), // Color placed inside BoxDecoration
@@ -57,17 +58,39 @@ class LawyerHomePage extends StatelessWidget {
                     ),
                   ),
                 )),
-            SizedBox(height: 100),
+            SizedBox(height: 20),
+
+//********************************************************************************************************************* */
             // Profile stats
             // Profile rating and earnings
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Text(
+                    'Last month earnings',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(height: 10),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Profile rating,
+
                 SizedBox(
-                  height: 65.0,
-                  width: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  width: MediaQuery.of(context).size.width *
+                      0.40, // adjust width based on screen size
                   child: Card(
                     color: Colors.white,
                     child: Padding(
@@ -76,7 +99,7 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Profile Rating',
+                            'Rating',
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
@@ -94,8 +117,9 @@ class LawyerHomePage extends StatelessWidget {
 
                 // Earnings,
                 SizedBox(
-                  height: 65.0,
-                  width: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  width: MediaQuery.of(context).size.width *
+                      0.40, // adjust width based on screen size
                   child: Card(
                     color: Colors.white,
                     child: Padding(
@@ -121,14 +145,15 @@ class LawyerHomePage extends StatelessWidget {
                 ),
               ],
             ),
+
 //*********************************************** */ *****************************************************************************
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Profile rating,
                 SizedBox(
-                  height: 65.0,
-                  width: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  width: MediaQuery.of(context).size.width * 0.40,
                   child: Card(
                     color: Colors.white,
                     child: Padding(
@@ -137,7 +162,7 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Profile clicks',
+                            'clicks',
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
@@ -155,8 +180,8 @@ class LawyerHomePage extends StatelessWidget {
 
                 // Earnings,
                 SizedBox(
-                  height: 65.0,
-                  width: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  width: MediaQuery.of(context).size.width * 0.40,
                   child: Card(
                     color: Colors.white,
                     child: Padding(
@@ -165,7 +190,7 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Profile Views',
+                            'Views',
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
@@ -184,13 +209,31 @@ class LawyerHomePage extends StatelessWidget {
             ),
 //******************************************************************************************************************* */
 
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Text(
+                    'Overall Profile Report',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+//**************************************************************************************************************************** */
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Profile rating,
                 SizedBox(
-                  height: 65.0,
-                  width: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  width: MediaQuery.of(context).size.width * 0.40,
                   child: Card(
                     color: Colors.white,
                     child: Padding(
@@ -217,8 +260,8 @@ class LawyerHomePage extends StatelessWidget {
 
                 // Earnings,
                 SizedBox(
-                  height: 65.0,
-                  width: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  width: MediaQuery.of(context).size.width * 0.40,
                   child: Card(
                     color: Colors.white,
                     child: Padding(
@@ -244,15 +287,16 @@ class LawyerHomePage extends StatelessWidget {
                 ),
               ],
             ),
-            //******************************************************************************************************************* */
+
+//************************************************************************************************************************ */
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Profile rating,
                 SizedBox(
-                  height: 65.0,
-                  width: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  width: MediaQuery.of(context).size.width * 0.40,
                   child: Card(
                     color: Colors.white,
                     child: Padding(
@@ -279,8 +323,8 @@ class LawyerHomePage extends StatelessWidget {
 
                 // Earnings,
                 SizedBox(
-                  height: 65.0,
-                  width: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  width: MediaQuery.of(context).size.width * 0.40,
                   child: Card(
                     color: Colors.white,
                     child: Padding(
@@ -305,7 +349,9 @@ class LawyerHomePage extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+
+//************************************************************************************************************************ */
           ],
         ),
       ),
