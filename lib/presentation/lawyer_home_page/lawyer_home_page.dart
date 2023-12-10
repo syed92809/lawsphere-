@@ -11,120 +11,108 @@ class LawyerHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Column(
           children: [
-            // Profile header
+            // Profile header,
             Container(
-              color: Color.fromARGB(255, 20, 7, 44),
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20)),
-              ),
-              child: Row(
-                children: [
-                  // Profile image
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/profile_image.png'),
+                height: 140,
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(
+                      255, 20, 7, 44), // Color placed inside BoxDecoration
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(15),
+                    bottomRight: Radius.circular(15),
                   ),
-                  SizedBox(width: 20),
-                  // Profile name
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Asad Ahmed',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 20),
-            // Profile stats
-            Expanded(
-              child: GridView.builder(
-                itemCount: 6,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
                 ),
-                itemBuilder: (context, index) {
-                  return Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Profile Views',
-                            style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            '18',
-                            style: TextStyle(fontSize: 20),
-                          ),
-                        ],
-                      ),
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        // Profile image
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage:
+                              AssetImage('assets/images/img_image_50x50.png'),
+                        ),
+                        SizedBox(width: 20),
+                        // Profile name
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Asad\nAhmed',
+                              style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                  );
-                },
-              ),
-            ),
-            SizedBox(height: 20),
+                  ),
+                )),
+            SizedBox(height: 100),
+            // Profile stats
             // Profile rating and earnings
+
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Profile rating
-                Expanded(
+                // Profile rating,
+                SizedBox(
+                  height: 65.0,
+                  width: 200.0,
                   child: Card(
+                    color: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(10),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             'Profile Rating',
                             style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.bold),
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                          Text(
+                          const Text(
                             '2.5',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 10),
                           ),
                         ],
                       ),
                     ),
                   ),
                 ),
-                SizedBox(width: 20),
-                // Earnings
-                Expanded(
+
+                // Earnings,
+                SizedBox(
+                  height: 65.0,
+                  width: 200.0,
                   child: Card(
+                    color: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(10),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             'Earnings',
                             style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.bold),
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                          Text(
+                          const Text(
                             '50k',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 10),
                           ),
                         ],
                       ),
@@ -133,6 +121,191 @@ class LawyerHomePage extends StatelessWidget {
                 ),
               ],
             ),
+//*********************************************** */ *****************************************************************************
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Profile rating,
+                SizedBox(
+                  height: 65.0,
+                  width: 200.0,
+                  child: Card(
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Profile clicks',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Text(
+                            '25',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                // Earnings,
+                SizedBox(
+                  height: 65.0,
+                  width: 200.0,
+                  child: Card(
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Profile Views',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Text(
+                            '167',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+//******************************************************************************************************************* */
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Profile rating,
+                SizedBox(
+                  height: 65.0,
+                  width: 200.0,
+                  child: Card(
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Success rate',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Text(
+                            '25%',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                // Earnings,
+                SizedBox(
+                  height: 65.0,
+                  width: 200.0,
+                  child: Card(
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Contracts',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Text(
+                            '4',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            //******************************************************************************************************************* */
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Profile rating,
+                SizedBox(
+                  height: 65.0,
+                  width: 200.0,
+                  child: Card(
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Success rate',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Text(
+                            '25%',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                // Earnings,
+                SizedBox(
+                  height: 65.0,
+                  width: 200.0,
+                  child: Card(
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Contracts',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Text(
+                            '4',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
