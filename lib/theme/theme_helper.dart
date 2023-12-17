@@ -281,7 +281,7 @@ class PrimaryColors {
   Color get gray900 => Color(0XFF171725);
 
   // Green
-  Color get green50 => Color(0XFFE6F9F0);
+  Color get green50 => Color.fromARGB(255, 75, 177, 129);
   Color get greenA700 => Color(0XFF00C566);
 
   // Indigo
@@ -293,7 +293,7 @@ class PrimaryColors {
 
   // Red
   Color get red50 => Color(0XFFFFF2ED);
-  Color get red500 => Color(0XFFF54646);
+  Color get red500 => Color.fromARGB(255, 219, 102, 102);
   Color get red5001 => Color(0XFFFFEDED);
   Color get red800 => Color(0XFFCC2229);
   Color get redA200 => Color(0XFFFF4747);

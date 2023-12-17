@@ -23,7 +23,7 @@ class SavedPage extends StatelessWidget {
                       onTapArrowbackone(context);
                     }),
                 centerTitle: true,
-                title: AppbarTitle(text: "Saved")),
+                title: AppbarTitle(text: "Contracts")),
             body: Container(
                 width: double.maxFinite,
                 padding: getPadding(left: 24, right: 24),

@@ -23,6 +23,14 @@ class CustomButtonStyles {
           borderRadius: BorderRadius.circular(getHorizontalSize(4.00)),
         ),
       );
+
+  static ButtonStyle get cancelContract => ElevatedButton.styleFrom(
+        backgroundColor: appTheme.red500,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(getHorizontalSize(4.00)),
+        ),
+      );
+
   static ButtonStyle get fillPrimary => ElevatedButton.styleFrom(
         backgroundColor: theme.colorScheme.primary,
         shape: RoundedRectangleBorder(
@@ -90,6 +98,13 @@ class CustomButtonStyles {
         side: BorderSide(
           color: theme.colorScheme.primary,
           width: 1,
+        ),
+      );
+  static ButtonStyle get dangerButton1 => OutlinedButton.styleFrom(
+        backgroundColor: Color.fromARGB(179, 245, 2, 2),
+        side: BorderSide(
+          color: theme.colorScheme.primary,
+          width: 0,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(getHorizontalSize(20.00)),

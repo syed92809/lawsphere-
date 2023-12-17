@@ -14,93 +14,149 @@ class SavedItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: getPadding(
-        all: 16,
+        all: 15,
       ),
       decoration: AppDecoration.outlineIndigo.copyWith(
         borderRadius: BorderRadiusStyle.roundedBorder16,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomIconButton(
-            height: getSize(48),
-            width: getSize(48),
+            height: getSize(0),
+            width: getSize(0),
             margin: getMargin(
               bottom: 68,
             ),
             padding: getPadding(
-              all: 8,
-            ),
-            child: CustomImageView(
-              svgPath: ImageConstant.imgFrame162722,
+              all: 5,
             ),
           ),
           Padding(
             padding: getPadding(
-              left: 12,
+              left: 1,
               top: 4,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text(
-                  "",
-                  style: CustomTextStyles.titleMediumBold_1,
+                Row(
+                  children: [
+                    Text(
+                      "Client Name",
+                      style: CustomTextStyles.titleMediumBold_1,
+                    ),
+                    const SizedBox(width: 33), // Adjust spacing as needed
+                    CustomElevatedButton(
+                      height: MediaQuery.of(context).size.height *
+                          0.03, // Dynamic button height
+                      width: MediaQuery.of(context).size.width * 0.47,
+                      text: "Mohammad Ali",
+                      buttonTextStyle: theme.textTheme.labelLarge!,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                // *****************************************************************
+                Row(
+                  children: [
+                    Text(
+                      "Contract Date",
+                      style: CustomTextStyles.titleMediumBold_1,
+                    ),
+                    const SizedBox(width: 20), // Adjust spacing as needed
+                    CustomElevatedButton(
+                      height: MediaQuery.of(context).size.height *
+                          0.03, // Dynamic button height
+                      width: MediaQuery.of(context).size.width * 0.47,
+                      text: "7/Oct/2023",
+                      buttonTextStyle: theme.textTheme.labelLarge!,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                // *************************************************************
+                Row(
+                  children: [
+                    Text(
+                      "Price",
+                      style: CustomTextStyles.titleMediumBold_1,
+                    ),
+                    const SizedBox(width: 80), // Adjust spacing as needed
+                    CustomElevatedButton(
+                      height: MediaQuery.of(context).size.height *
+                          0.03, // Dynamic button height
+                      width: MediaQuery.of(context).size.width * 0.47,
+                      text: "Rs 40,000",
+                      buttonTextStyle: theme.textTheme.labelLarge!,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                // *************************************************************
+                Row(
+                  children: [
+                    Text(
+                      "Status",
+                      style: CustomTextStyles.titleMediumBold_1,
+                    ),
+                    const SizedBox(width: 71), // Adjust spacing as needed
+                    CustomElevatedButton(
+                      height: MediaQuery.of(context).size.height *
+                          0.03, // Dynamic button height
+                      width: MediaQuery.of(context).size.width * 0.47,
+                      text: "On-going",
+                      buttonTextStyle: theme.textTheme.labelLarge!,
+                    ),
+                  ],
                 ),
                 Padding(
-                  padding: getPadding(
-                    top: 6,
-                  ),
-                  child: Text(
-                    "",
-                    style: CustomTextStyles.labelLargeBluegray300SemiBold,
-                  ),
-                ),
-                Padding(
-                  padding: getPadding(
-                    top: 10,
-                  ),
-                  child: Text(
-                    "560 - 12.000/Month",
-                    style: CustomTextStyles.labelLargeGray600_1,
-                  ),
-                ),
-                Padding(
-                  padding: getPadding(
-                    top: 13,
-                  ),
+                  padding: EdgeInsets.only(top: 20, left: 5),
                   child: Row(
                     children: [
                       CustomElevatedButton(
-                        height: getVerticalSize(28),
-                        width: getHorizontalSize(70),
-                        text: "Fulltime",
-                        buttonTextStyle: theme.textTheme.labelLarge!,
+                        height: MediaQuery.of(context).size.height *
+                            0.03, // Dynamic button height
+                        width: MediaQuery.of(context).size.width * 0.32,
+                        text: "Cancel Contract",
+                        buttonStyle: CustomButtonStyles.cancelContract,
+                        onTap: () {
+                          // Cancel contract code goes here
+                        },
                       ),
+                      const SizedBox(width: 10),
                       CustomElevatedButton(
-                        height: getVerticalSize(28),
-                        width: getHorizontalSize(103),
-                        text: "Two days ago",
-                        margin: getMargin(
-                          left: 8,
-                        ),
-                        buttonTextStyle: theme.textTheme.labelLarge!,
+                        height: MediaQuery.of(context).size.height *
+                            0.03, // Dynamic button height
+                        width: MediaQuery.of(context).size.width * 0.42,
+                        text: "Contract Completed",
+                        buttonStyle: CustomButtonStyles.fillGreen,
+                        onTap: () {
+                          // Contract completed code goes here
+                        },
                       ),
                     ],
                   ),
                 ),
+
+                SizedBox(
+                  height: 2,
+                ),
+                // *************************************************************
+                Padding(
+                  padding: getPadding(
+                    top: 8,
+                  ),
+                ),
               ],
-            ),
-          ),
-          CustomImageView(
-            svgPath: ImageConstant.imgBookmarkPrimary,
-            height: getSize(24),
-            width: getSize(24),
-            margin: getMargin(
-              left: 30,
-              bottom: 92,
             ),
           ),
         ],
