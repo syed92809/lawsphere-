@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:syed_s_application4/firebase_options.dart';
 import 'package:syed_s_application4/theme/theme_helper.dart';
 import 'package:syed_s_application4/routes/app_routes.dart';
+import 'package:firebase_core/firebase_core.dart';
+// ignore: duplicate_import
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
