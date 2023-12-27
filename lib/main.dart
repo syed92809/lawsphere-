@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: theme,
       title: 'syed_s_application4',
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.lawyerContainerScreen,
+      initialRoute: AppRoutes.signUpCreateAcountScreen,
       routes: AppRoutes.routes,
     );
   }

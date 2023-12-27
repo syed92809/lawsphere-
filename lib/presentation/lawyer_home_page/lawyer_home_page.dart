@@ -134,14 +134,15 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Last Week',
+                            '2k',
                             style: TextStyle(
                               fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            '2k',
+                            'Last week',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontStyle: FontStyle.italic,
@@ -168,14 +169,15 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Last Month',
+                            '5k',
                             style: TextStyle(
                               fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            '5k',
+                            'Last month',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontStyle: FontStyle.italic,
@@ -205,14 +207,15 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Last Year',
+                            '45k',
                             style: TextStyle(
                               fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            '45k',
+                            'Last year',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontStyle: FontStyle.italic,
@@ -238,14 +241,15 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Overall',
+                            '150k',
                             style: TextStyle(
                               fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            '150k',
+                            'Overall',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontStyle: FontStyle.italic,
@@ -302,14 +306,15 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Success rate',
+                            '60%',
                             style: TextStyle(
                               fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            '60%',
+                            'Success rate',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontStyle: FontStyle.italic,
@@ -335,14 +340,15 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Contracts',
+                            '20',
                             style: TextStyle(
                               fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            '20',
+                            'Contracts completed',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontStyle: FontStyle.italic,
@@ -373,14 +379,15 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Clicks',
+                            '5k',
                             style: TextStyle(
                               fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            '5k',
+                            'Clicks',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontStyle: FontStyle.italic,
@@ -406,14 +413,15 @@ class LawyerHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Rating',
+                            '4.0',
                             style: TextStyle(
                               fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            '4.0',
+                            'Ratings',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontStyle: FontStyle.italic,

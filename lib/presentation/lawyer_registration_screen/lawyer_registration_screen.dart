@@ -11,7 +11,7 @@ class LawyerRegScreen extends StatelessWidget {
 
   TextEditingController lastNameController = TextEditingController();
 
-  TextEditingController passwordController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
 
   TextEditingController countryController = TextEditingController();
 
@@ -82,24 +82,14 @@ class LawyerRegScreen extends StatelessWidget {
                                   left: 12, top: 15, right: 12, bottom: 15)),
                           Padding(
                               padding: getPadding(top: 18),
-                              child: Text("Password",
+                              child: Text("Phone",
                                   style: theme.textTheme.titleSmall)),
                           CustomTextFormField(
-                              controller: passwordController,
+                              controller: phoneController,
                               margin: getMargin(top: 9),
-                              hintText: "Create a password",
+                              hintText: "Enter phone number",
                               hintStyle:
                                   CustomTextStyles.titleMediumBluegray400,
-                              textInputAction: TextInputAction.done,
-                              textInputType: TextInputType.visiblePassword,
-                              suffix: Container(
-                                  margin: getMargin(
-                                      left: 30, top: 14, right: 16, bottom: 14),
-                                  child: CustomImageView(
-                                      svgPath: ImageConstant.imgCheckmark)),
-                              suffixConstraints: BoxConstraints(
-                                  maxHeight: getVerticalSize(52)),
-                              obscureText: true,
                               contentPadding:
                                   getPadding(left: 16, top: 15, bottom: 15)),
                           Padding(
@@ -155,33 +145,6 @@ class LawyerRegScreen extends StatelessWidget {
                                                     style: theme.textTheme
                                                         .titleMedium)))
                                       ]))),
-                          Align(
-                              alignment: Alignment.center,
-                              child: Container(
-                                  width: getHorizontalSize(245),
-                                  margin: getMargin(
-                                      left: 40, top: 19, right: 40, bottom: 5),
-                                  child: RichText(
-                                      text: TextSpan(children: [
-                                        TextSpan(
-                                            text:
-                                                "By signing up you agree to our ",
-                                            style: CustomTextStyles
-                                                .titleSmallBluegray400SemiBold),
-                                        TextSpan(
-                                            text: "Terms",
-                                            style: CustomTextStyles
-                                                .titleSmallErrorContainer),
-                                        TextSpan(
-                                            text: " and ",
-                                            style: CustomTextStyles
-                                                .titleSmallBluegray400SemiBold),
-                                        TextSpan(
-                                            text: "Conditions of Use",
-                                            style: CustomTextStyles
-                                                .titleSmallErrorContainer)
-                                      ]),
-                                      textAlign: TextAlign.center)))
                         ])))));
   }
 

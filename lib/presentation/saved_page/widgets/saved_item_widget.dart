@@ -125,7 +125,7 @@ class SavedItemWidget extends StatelessWidget {
                       CustomElevatedButton(
                         height: MediaQuery.of(context).size.height *
                             0.03, // Dynamic button height
-                        width: MediaQuery.of(context).size.width * 0.32,
+                        width: MediaQuery.of(context).size.width * 0.36,
                         text: "Cancel Contract",
                         buttonStyle: CustomButtonStyles.cancelContract,
                         onTap: () {
@@ -136,7 +136,7 @@ class SavedItemWidget extends StatelessWidget {
                       CustomElevatedButton(
                         height: MediaQuery.of(context).size.height *
                             0.03, // Dynamic button height
-                        width: MediaQuery.of(context).size.width * 0.42,
+                        width: MediaQuery.of(context).size.width * 0.36,
                         text: "Contract Completed",
                         buttonStyle: CustomButtonStyles.fillGreen,
                         onTap: () {
