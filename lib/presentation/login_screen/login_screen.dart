@@ -95,6 +95,12 @@ class LoginScreen extends StatelessWidget {
                               textInputType: TextInputType.emailAddress,
                               contentPadding: getPadding(
                                   left: 12, top: 15, right: 12, bottom: 15)),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: Padding(
+                                  padding: getPadding(top: 28),
+                                  child: Text("Password",
+                                      style: theme.textTheme.titleSmall))),
                           CustomTextFormField(
                               controller: passwordcontroller,
                               margin: getMargin(top: 9),
@@ -135,7 +141,7 @@ class LoginScreen extends StatelessWidget {
                           Container(
                               width: getHorizontalSize(245),
                               margin: getMargin(
-                                  left: 40, top: 84, right: 40, bottom: 5),
+                                  left: 40, top: 30, right: 40, bottom: 5),
                               child: RichText(
                                   text: TextSpan(children: [
                                     TextSpan(

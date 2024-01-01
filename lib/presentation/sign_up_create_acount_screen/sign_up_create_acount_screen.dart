@@ -1,16 +1,55 @@
+// ignore_for_file: unused_local_variable
 import 'package:flutter/material.dart';
 import 'package:syed_s_application4/core/app_export.dart';
+import 'package:syed_s_application4/presentation/enter_otp_screen/enter_otp_screen.dart';
 import 'package:syed_s_application4/widgets/custom_elevated_button.dart';
 import 'package:syed_s_application4/widgets/custom_outlined_button.dart';
 import 'package:syed_s_application4/widgets/custom_text_form_field.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 // ignore_for_file: must_be_immutable
 class SignUpCreateAcountScreen extends StatelessWidget {
   SignUpCreateAcountScreen({Key? key}) : super(key: key);
 
   TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  signUp(BuildContext context, String email, String password) async {
+    if (email == "" || password == "") {
+      Fluttertoast.showToast(
+          msg: "Fill the required fields to continue",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 3,
+          backgroundColor: Colors.red,
+          textColor: Colors.white,
+          webBgColor: "linear-gradient(to right, #dc1c13, #dc1c13)",
+          fontSize: 16.0);
+    } else {
+      UserCredential? usercredential;
+
+      try {
+        usercredential = await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: email, password: password);
+
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => EnterOtpScreen()));
+      } on FirebaseAuthException catch (ex) {
+        Fluttertoast.showToast(
+            msg: ex.code.toString(),
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 3,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            webBgColor: "linear-gradient(to right, #dc1c13, #dc1c13)",
+            fontSize: 16.0);
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +76,12 @@ class SignUpCreateAcountScreen extends StatelessWidget {
                                 onTapImgImage(context);
                               }),
                           Padding(
-                              padding: getPadding(top: 44),
+                              padding: getPadding(top: 20),
                               child: Text("Create account",
                                   style: theme.textTheme.headlineSmall)),
                           Padding(
                               padding: getPadding(top: 11),
-                              child: Text("Lorem ipsum dolor sit amet",
+                              child: Text("Create Your Account",
                                   style:
                                       CustomTextStyles.titleMediumBluegray400)),
                           CustomOutlinedButton(
@@ -105,12 +144,32 @@ class SignUpCreateAcountScreen extends StatelessWidget {
                               textInputType: TextInputType.emailAddress,
                               contentPadding: getPadding(
                                   left: 12, top: 15, right: 12, bottom: 15)),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: Padding(
+                                  padding: getPadding(top: 28),
+                                  child: Text("Password",
+                                      style:
+                                          CustomTextStyles.titleSmallPrimary))),
+                          CustomTextFormField(
+                              controller: passwordController,
+                              margin: getMargin(top: 9),
+                              hintText: "Create your password",
+                              hintStyle:
+                                  CustomTextStyles.titleMediumBluegray400,
+                              textInputAction: TextInputAction.done,
+                              textInputType: TextInputType.visiblePassword,
+                              contentPadding: getPadding(
+                                  left: 12, top: 15, right: 12, bottom: 15)),
                           CustomElevatedButton(
                               text: "Continue with Email",
                               margin: getMargin(top: 40),
                               buttonStyle: CustomButtonStyles.fillPrimary,
                               onTap: () {
-                                onTapContinuewith(context);
+                                signUp(context, emailController.text.toString(),
+                                    passwordController.text.toString());
+
+                                // onTapContinuewith(context);
                               }),
                           Padding(
                               padding: getPadding(left: 40, top: 28, right: 40),
@@ -133,7 +192,7 @@ class SignUpCreateAcountScreen extends StatelessWidget {
                           Container(
                               width: getHorizontalSize(245),
                               margin: getMargin(
-                                  left: 40, top: 84, right: 40, bottom: 5),
+                                  left: 40, top: 30, right: 40, bottom: 5),
                               child: RichText(
                                   text: TextSpan(children: [
                                     TextSpan(
@@ -164,6 +223,25 @@ class SignUpCreateAcountScreen extends StatelessWidget {
   onTapImgImage(BuildContext context) {
     Navigator.pop(context);
   }
+
+  Widget customToast = Container(
+    padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(25.0), // Adjust as needed
+      color: Colors.red,
+      boxShadow: const [
+        BoxShadow(
+          color: Colors.black12,
+          offset: Offset(0.0, 4.0),
+          blurRadius: 4.0,
+        ),
+      ],
+    ),
+    child: Text(
+      "Fill the required fields to continue",
+      style: TextStyle(color: Colors.white, fontSize: 16.0),
+    ),
+  );
 
   /// Navigates to the signUpCompleteAccountScreen when the action is triggered.
   ///
